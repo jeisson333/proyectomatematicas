@@ -1,0 +1,224 @@
+/* Definición de colores en variables */
+:root {
+  --color-fondo-header: #333;
+  --color-texto-header: #fff;
+  --color-fondo-nav: #777;
+  --color-texto-nav: #000;
+  --color-fondo-seccion: #f0f0f0;
+  --color-texto-seccion: #555;
+  --color-fondo-articulo: #fff;
+  --color-texto-articulo: #666;
+  --color-fondo-footer: #444;
+  --color-texto-footer: #fff;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+/* Input Forms*/
+  /* Input Forms*/
+  input[type="text"], input[type="password"]{
+      outline: none;
+      padding: 20px;
+      display: block;
+      width: 300px;
+      border-radius: 3px;
+      border: 1px solid #eee;
+      margin: 20px auto;
+    }
+    
+    input[type="submit"] {
+      padding: 10px;
+      color: #fff;
+      background: #0098cb;
+      width: 320px;
+      margin: 20px auto;
+      margin-top: 0;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #00b8eb;
+    }
+
+/* Estilos para el encabezado */
+header img {
+  float: left; /* Alinea la imagen a la izquierda */
+  margin-right: 10px; /* Agrega un espacio a la derecha de la imagen */
+  width: 50px; /* Establece el ancho deseado de la imagen (ajusta este valor según tu preferencia) */
+  height: 100%; /* Mantiene la relación de aspecto original */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+  background-color: var(--color-fondo-nav);
+  color: var(--color-texto-nav);
+  text-align: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* Estilos para la lista de navegación */
+#nav-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#nav-list li {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* Estilos para el menú desplegable en dispositivos móviles */
+#nav-list.active {
+  display: block;
+}
+
+/* Estilos para el botón de menú en dispositivos móviles */
+#menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Estilos para el menú desplegable en dispositivos móviles */
+#menu-toggle.active {
+  display: block;
+}
+
+/* Estilos para la sección y los artículos */
+section {
+  background-color: var(--color-fondo-seccion);
+  padding: 20px;
+}
+
+article {
+  background-color: var(--color-fondo-articulo);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos para las imágenes dentro de los artículos */
+article img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: var(--color-fondo-footer);
+  color: var(--color-texto-footer);
+  text-align: center;
+  padding: 10px;
+}
+
+.articulo1, .articulo2 {
+  display: inline-block; /* Establece el diseño en línea para que estén uno al lado del otro */
+  width: 48%; /* Establece el ancho deseado para cada artículo */
+  margin-right: 2%; /* Agrega un pequeño margen entre los artículos (puedes ajustar esto) */
+  vertical-align: top; /* Alinea los artículos en la parte superior para que coincidan en la parte superior */
+}
+
+/* Para evitar que el último artículo tenga margen derecho */
+.articulo2:last-child {
+  margin-right: 0;
+}
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Para hacerla circular */
+  cursor: pointer;
+}
+
+/* Inicialmente, oculta el menú de perfil */
+ul.profile-menu {
+  display: none;
+  position: absolute;
+  
+  
+  background-color: var(--color-fondo-nav);
+  border: 1px solid var(--color-texto-nav);
+  padding: 10px 0;
+  text-align: right;
+  
+  margin: 0;
+  width: 150px;
+}
+ul.profile-menu.show-menu {
+  display: block;
+  left: 50%; /* Ajusta la posición para que esté alineado con la imagen */
+
+}
+ul.profile-menu li {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+ul.profile-menu li a {
+  color: var(--color-texto-header);
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+
+ul.profile-menu li a:hover {
+  background-color: var(--color-fondo-header);
+  color: var(--color-texto-nav);
+}
+/* Mostrar el menú cuando la clase show-menu está presente */
+/* Estilos para la barra de navegación en dispositivos móviles */
+@media (max-width: 768px) {
+  #nav-list {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  #menu-toggle.active {
+    display: none;
+  }
+
+  #nav-list.active {
+    display: block;
+  }
+}
+/* Estilos para los artículos en dispositivos móviles */
+@media (max-width: 768px) {
+  .articulo1, .articulo2 {
+    display: block;
+    width: 100%; /* Opcional, ajusta el ancho según tus necesidades */
+    margin-right: 0;
+  }
+}
+
+
+
+
+
