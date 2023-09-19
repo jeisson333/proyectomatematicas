@@ -5,12 +5,12 @@
     </div>
     <ul id="nav-list">
           <li><a href="/proyectoMatematicas">Home</a></li>
-          <li class="mr-menu"><a href="#">Free</a></li>  
+          <li class="mr-menu"><a href="free.php">Free</a></li>  
           <li class="welcome">Bienvenido <?= $user['name']; ?></li>
           <li><img src='./assets/img/profile.svg' alt="Logo de la empresa" class="profile-img" /></li>
     </ul>
     <ul class="profile-menu">
-      <li><a href="/changePassword">Cambiar contraseña</a></li>
+      <li><a href="/change-password.php">Cambiar contraseña</a></li>
       <li><a href="logout.php">Cerrar sesión</a></li>   
     </ul>
         
