@@ -1,6 +1,6 @@
 <?php
 
-  /* require 'database.php';
+  require 'database.php';
 
   $message = '';
 
@@ -17,7 +17,7 @@
     } else {
       $message = 'Lo sentimos, hubo un problema al crear tu cuenta.';
     }
-  } */
+  }
 ?>
 <!DOCTYPE html>
 <html>
