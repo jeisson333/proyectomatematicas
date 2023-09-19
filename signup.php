@@ -1,6 +1,6 @@
 <?php
 
-  require 'database.php';
+  /* require 'database.php';
 
   $message = '';
 
@@ -17,7 +17,7 @@
     } else {
       $message = 'Lo sentimos, hubo un problema al crear tu cuenta.';
     }
-  }
+  } */
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,23 +28,28 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+    <div class="app-container">
+        <div class="login">
+          <img class="img-login" src="./assets/img/login-img.jpg" alt="Computadora"/>
+          <div>
+            <?php require 'partials/header.php' ?>
 
-    <?php require 'partials/header.php' ?>
+            <?php if(!empty($message)): ?>
+              <p> <?= $message ?></p>
+            <?php endif; ?>
 
-    <?php if(!empty($message)): ?>
-      <p> <?= $message ?></p>
-    <?php endif; ?>
+            <h1>Registro</h1>
 
-    <h1>Registrase</h1>
-    <span>o <a href="login.php">Iniciar sesion</a></span>
-
-    <form action="signup.php" method="POST">
-      <input name="name" type="text" placeholder="Nombre">
-      <input name="email" type="text" placeholder="Introduce tu correo electrónico">
-      <input name="password" type="password" placeholder="Ingresa tu contraseña">
-      <input name="confirm_password" type="password" placeholder="Confirmar Contraseña">
-      <input type="submit" value="Registrarte">
-    </form>
-
+            <form action="signup.php" method="POST">
+              <input name="name" type="text" placeholder="Nombre">
+              <input name="email" type="text" placeholder="Introduce tu correo electrónico">
+              <input name="password" type="password" placeholder="Ingresa tu contraseña">
+              <input name="confirm_password" type="password" placeholder="Confirmar Contraseña">
+              <input type="submit" value="Registrarse">
+            </form>
+            <p class="register">¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
+          </div>
+      </div>
+    </div>
   </body>
 </html>
