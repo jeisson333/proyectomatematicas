@@ -26,16 +26,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
   </head>
-  <body>
-    
+  <body> 
     <?php require 'partials/header.php' ?>
     <?php if(!empty($user)): ?>
-      
-      <?php require 'partials/home.php' ?>
-      
+      <?php require 'partials/home.php' ?>  
     <?php else: ?>
       <?php require 'partials/home.php' ?>
-      <h1>aqui info de la pagina</h1>
     <?php endif; ?>
     <script src="script.js"></script>
   </body>
