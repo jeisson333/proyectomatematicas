@@ -34,19 +34,23 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <?php require 'partials/header.php' ?>
-
-    <?php if(!empty($message)): ?>
-      <p> <?= $message ?></p>
-    <?php endif; ?>
-
-    <h1>Iniciar</h1>
-    <span>or <a href="signup.php">SignUp</a></span>
-
-    <form action="login.php" method="POST">
-      <input name="email" type="text" placeholder="Enter your email">
-      <input name="password" type="password" placeholder="Enter your Password">
-      <input type="submit" value="Submit">
-    </form>
+    <div class="app-container">
+      <div class="login">
+        <img class="img-login" src="./assets/img/login-img.jpg" alt="Computadora"/>
+        <div>
+          <?php require 'partials/header.php' ?>
+          <?php if(!empty($message)): ?>
+            <p> <?= $message ?></p>
+          <?php endif; ?>
+          <h1>Iniciar sesión</h1>
+          <form action="login.php" method="POST">
+            <input name="email" type="text" placeholder="Email">
+            <input name="password" type="password" placeholder="Password">
+            <input type="submit" value="Submit">
+          </form>
+          <p class="register">¿No tienes una cuenta? <a href="signup.php">Regístrate</a></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
